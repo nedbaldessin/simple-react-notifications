@@ -62,12 +62,13 @@ const Notification = ({
   <div
     className={`item ${type} ${rtl ? "rtl" : "ltr"}`}
     style={{ width }}
+    role="alert"
     onClick={() => closeOnClick && onClose()}
     onMouseEnter={onMouseEnter}
     onMouseLeave={onMouseLeave}
   >
     <span>{message}</span>
-    <button onClick={onClose}>✖</button>
+    <button onClick={onClose} ariaLabel="Dismiss">✖</button>
   </div>
 );
 
